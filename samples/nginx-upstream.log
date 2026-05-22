@@ -1,0 +1,5 @@
+May 22 14:30:01 web-01 nginx[1024]: 2026/05/22 14:30:01 [error] 1024#0: *5872 connect() failed (111: Connection refused) while connecting to upstream, client: 10.0.0.5, server: api.example.com, request: "GET /v1/users HTTP/1.1", upstream: "http://127.0.0.1:8000/v1/users", host: "api.example.com"
+May 22 14:30:01 web-01 nginx[1024]: 2026/05/22 14:30:01 [error] 1024#0: *5873 upstream prematurely closed connection while reading response header from upstream
+May 22 14:30:02 web-01 nginx[1024]: 2026/05/22 14:30:02 [crit] 1024#0: *5874 SSL_do_handshake() failed (SSL: error:0A000412:SSL routines::sslv3 alert bad certificate)
+May 22 14:30:05 web-01 nginx[1024]: 2026/05/22 14:30:05 [error] 1024#0: *5876 no live upstreams while connecting to upstream
+May 22 14:30:05 web-01 nginx[1024]: 2026/05/22 14:30:05 [alert] 1024#0: 1024 worker_connections are not enough

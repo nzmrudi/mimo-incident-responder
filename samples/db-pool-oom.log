@@ -1,0 +1,14 @@
+[2026-05-22 14:32:11] ERROR worker.py:204 - psycopg2.OperationalError: FATAL: remaining connection slots are reserved for non-replication superuser connections
+[2026-05-22 14:32:11] ERROR pool.py:88 - Failed to acquire connection after 30s timeout (pool exhausted: 0 free / 100 total)
+[2026-05-22 14:32:12] WARNING gunicorn[1234]: Worker timeout (pid:5678)
+[2026-05-22 14:32:12] CRITICAL gunicorn[1234]: Worker (pid:5678) was sent SIGKILL! Perhaps out of memory?
+[2026-05-22 14:32:13] ERROR django.request - Internal Server Error: /api/orders/
+Traceback (most recent call last):
+  File "django/db/backends/utils.py", line 87, in _execute
+    return self.cursor.execute(sql, params)
+  File "django/db/backends/postgresql/base.py", line 240, in execute
+    return self.cursor.execute(sql, params)
+psycopg2.OperationalError: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+[2026-05-22 14:32:14] CRITICAL kernel: Out of memory: Killed process 5678 (gunicorn) total-vm:2451360kB anon-rss:1923040kB

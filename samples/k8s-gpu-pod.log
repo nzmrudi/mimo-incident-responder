@@ -1,0 +1,6 @@
+2026-05-22T14:30:11.234Z [INFO] kubelet: Watching for events on node gpu-worker-3
+2026-05-22T14:30:12.456Z [WARN] kubelet: Container ml-trainer-7d9f-x2k4h has been running for 12 minutes
+2026-05-22T14:30:13.789Z [ERROR] cri-containerd: failed to start container "ml-trainer": OCI runtime create failed: container_linux.go:380: starting container process caused: process_linux.go:545: container init caused: rootfs_linux.go:60: mounting "/dev/nvidia0" to rootfs at "/dev/nvidia0" caused: open /dev/nvidia0: no such device
+2026-05-22T14:30:14.012Z [ERROR] kubelet: Failed to pull image "nvcr.io/nvidia/pytorch:24.05-py3": rpc error: code = Unknown desc = failed to pull and unpack image: failed to copy: httpReadSeeker: failed open: unexpected status code https://nvcr.io/v2/nvidia/pytorch/manifests/24.05-py3: 401 Unauthorized
+2026-05-22T14:30:15.345Z [ERROR] kubelet: Pod "ml-trainer-7d9f-x2k4h_default(uuid)" failed: ImagePullBackOff
+2026-05-22T14:30:16.678Z [WARN] scheduler: 0/8 nodes available: 4 node(s) had taints, 4 node(s) didn't have free GPUs
